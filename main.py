@@ -60,6 +60,23 @@ def pattern_i(n):
         for j in range(1,col+1): # +1 for for loop 
             print(j,end=" ")
         print("")
+        
+
+def pattern_i(n):
+    for i in range(1,n+1):
+        col = n-(i-1)
+        for j in range(1,col+1): # +1 for for loop 
+            print(j,end=" ")
+        print("")
+        
+def pattern_j(n):
+    sub=2
+    for i in range(1,n*2):
+        stars =  i if i<= n else (n*2)-i
+
+        for j in range(1,stars+1):
+            print("*",end=" ")
+        print("")
 
 if __name__ == "__main__":
     # pattern_a(5)
@@ -71,5 +88,6 @@ if __name__ == "__main__":
     # pattern_f(5)
     # pattern_g(5)
     # pattern_h(5)
-    pattern_i(5)
+    # pattern_i(5)
+    pattern_j(5)
     
