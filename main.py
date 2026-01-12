@@ -70,13 +70,60 @@ def pattern_i(n):
         print("")
         
 def pattern_j(n):
-    sub=2
     for i in range(1,n*2):
         stars =  i if i<= n else (n*2)-i
-
         for j in range(1,stars+1):
             print("*",end=" ")
         print("")
+
+def print_k(n):
+    for i in range(1,n+1):
+        stars = i
+        spaces = n-i
+                
+        for _ in range(1,spaces+1):
+            print(" ",end="")
+            
+        for j in range(1,stars+1):
+            print("*",end="")
+        print("")
+        
+def print_l(n):
+    for i in range(1,n+1):
+        stars = (n-i)+1
+        spaces = n-stars
+                
+        for _ in range(1,spaces+1):
+            print(" ",end="")
+            
+        for j in range(1,stars+1):
+            print("*",end="")
+        print("")
+        
+def print_l(n):
+    for i in range(1,n+1):
+        stars = (n-i)+1
+        spaces = n-stars
+                
+        for _ in range(1,spaces+1):
+            print(" ",end="")
+            
+        for j in range(1,stars+1):
+            print("*",end="")
+        print("")
+
+def print_m(n):
+    for i in range(1,n+1):
+        stars = (i*2)-1
+        spaces = n-i
+        
+        for _ in range(1,spaces+1):
+            print(" ",end="")
+            
+        for j in range(1,stars+1):
+            print("*",end="")
+        print("")
+        
 
 if __name__ == "__main__":
     # pattern_a(5)
@@ -89,5 +136,8 @@ if __name__ == "__main__":
     # pattern_g(5)
     # pattern_h(5)
     # pattern_i(5)
-    pattern_j(5)
+    # pattern_j(5)
+    # print_k(5)
+    # print_l(5)
+    print_m(5)
     
