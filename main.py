@@ -61,13 +61,6 @@ def pattern_i(n):
             print(j,end=" ")
         print("")
         
-
-def pattern_i(n):
-    for i in range(1,n+1):
-        col = n-(i-1)
-        for j in range(1,col+1): # +1 for for loop 
-            print(j,end=" ")
-        print("")
         
 def pattern_j(n):
     for i in range(1,n*2):
@@ -91,19 +84,7 @@ def print_k(n):
 def print_l(n):
     for i in range(1,n+1):
         stars = (n-i)+1
-        spaces = n-stars
-                
-        for _ in range(1,spaces+1):
-            print(" ",end="")
-            
-        for j in range(1,stars+1):
-            print("*",end="")
-        print("")
-        
-def print_l(n):
-    for i in range(1,n+1):
-        stars = (n-i)+1
-        spaces = n-stars
+        spaces = i-1
                 
         for _ in range(1,spaces+1):
             print(" ",end="")
@@ -123,7 +104,50 @@ def print_m(n):
         for j in range(1,stars+1):
             print("*",end="")
         print("")
+
+def print_n(n):
+    for i in range(1,n+1):
+        spaces = i-1
+        stars = 2*(n-i)+1
         
+        for _ in range(1,spaces+1):
+            print(" ",end="")
+            
+        for j in range(1,stars+1):
+            print("*",end="")
+            
+        print("")
+
+def print_o(n):
+    for i in range(1,(n*2-1)+1):
+        effective_i = i if i<=n else n*2 - i
+
+        stars = effective_i*2-1
+        spaces = n-effective_i
+
+        for _ in range(1,spaces+1):
+            print(" ",end="")
+            
+        for j in range(1,stars+1):
+            print("*",end="")
+        
+        print("")
+
+def pattern_p(n):
+    for i in range(1,(n*2)+1):
+        effective_i = i if i<=n else n*2 - i + 1
+        
+        spaces = effective_i - 1
+        stars = n-(effective_i-1)
+
+        for _ in range(1,spaces+1):
+            print(" ",end="")
+            
+        for j in range(1,stars+1):
+            print("*",end=" ")
+        
+        print("")
+
 
 if __name__ == "__main__":
     # pattern_a(5)
@@ -139,5 +163,9 @@ if __name__ == "__main__":
     # pattern_j(5)
     # print_k(5)
     # print_l(5)
-    print_m(5)
+    # print_m(5)
+    # print_n(5)
+    # print_o( 5)
+    pattern_p(5)
+
     
