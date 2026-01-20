@@ -199,5 +199,3 @@ if __name__ == "__main__":
     # pattern_p(5)
     # pattern_q(5)
     pattern_r(5)
-
-    
