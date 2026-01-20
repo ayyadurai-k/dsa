@@ -148,6 +148,36 @@ def pattern_p(n):
         
         print("")
 
+def pattern_q(n):
+    for i in range(1,n+1):
+        space = n - i
+        stars = i*2 -1 
+
+        for _ in range(1,space+1):
+            print(" ",end="")
+        
+        for j in range(1,stars+1):
+            if j==1 or stars == j or i==n:
+                print("*",end="")
+            else:
+                print(" ",end="")
+        print("")
+
+def pattern_r(n):
+    for i in range(1,n+1):
+        space = i-1
+        stars = (n-i)*2 + 1
+
+        for _ in range(1,space+1):
+            print(" ",end="")
+        
+        for j in range(1,stars+1):
+            if j==1 or stars == j or i==1:
+                print("*",end="")
+            else:
+                print(" ",end="")
+        print("")
+
 
 if __name__ == "__main__":
     # pattern_a(5)
@@ -165,7 +195,9 @@ if __name__ == "__main__":
     # pattern_l(5)
     # pattern_m(5)
     # pattern_n(5)
-    pattern_o(5)
+    # pattern_o(5)
     # pattern_p(5)
+    # pattern_q(5)
+    pattern_r(5)
 
     
