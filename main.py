@@ -69,7 +69,7 @@ def pattern_j(n):
             print("*",end=" ")
         print("")
 
-def print_k(n):
+def pattern_k(n):
     for i in range(1,n+1):
         stars = i
         spaces = n-i
@@ -81,7 +81,7 @@ def print_k(n):
             print("*",end="")
         print("")
         
-def print_l(n):
+def pattern_l(n):
     for i in range(1,n+1):
         stars = (n-i)+1
         spaces = i-1
@@ -93,7 +93,7 @@ def print_l(n):
             print("*",end="")
         print("")
 
-def print_m(n):
+def pattern_m(n):
     for i in range(1,n+1):
         stars = (i*2)-1
         spaces = n-i
@@ -105,7 +105,7 @@ def print_m(n):
             print("*",end="")
         print("")
 
-def print_n(n):
+def pattern_n(n):
     for i in range(1,n+1):
         spaces = i-1
         stars = 2*(n-i)+1
@@ -118,7 +118,7 @@ def print_n(n):
             
         print("")
 
-def print_o(n):
+def pattern_o(n):
     for i in range(1,(n*2-1)+1):
         effective_i = i if i<=n else n*2 - i
 
@@ -161,11 +161,11 @@ if __name__ == "__main__":
     # pattern_h(5)
     # pattern_i(5)
     # pattern_j(5)
-    # print_k(5)
-    # print_l(5)
-    # print_m(5)
-    # print_n(5)
-    # print_o( 5)
-    pattern_p(5)
+    # pattern_k(5)
+    # pattern_l(5)
+    # pattern_m(5)
+    # pattern_n(5)
+    pattern_o(5)
+    # pattern_p(5)
 
     
