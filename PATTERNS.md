@@ -197,3 +197,17 @@ This document contains the outputs of all pattern printing functions with n=5.
     *
 ```
 
+## pattern_s
+
+```
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+```
+

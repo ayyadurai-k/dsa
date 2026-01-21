@@ -178,6 +178,27 @@ def pattern_r(n):
                 print(" ",end="")
         print("")
 
+def pattern_s(n):
+    for i in range(1,n*2):
+        core_i = i if i <= n else (n*2)-i
+
+        spaces = n-core_i
+        stars = core_i*2 - 1
+
+        for _ in range(1,spaces+1):
+            print(" ",end="")
+            
+        for j in range(1,stars+1):
+            if j==1 or j==stars:
+                print("*",end="")
+            else:
+                print(" ",end="")
+        
+        print("")
+
+
+
+
 
 if __name__ == "__main__":
     # pattern_a(5)
@@ -198,4 +219,5 @@ if __name__ == "__main__":
     # pattern_o(5)
     # pattern_p(5)
     # pattern_q(5)
-    pattern_r(5)
+    # pattern_r(5)
+    pattern_s(5)

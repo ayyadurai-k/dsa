@@ -3,7 +3,7 @@ from io import StringIO
 from main import (
     pattern_a, pattern_b, pattern_c, pattern_d, pattern_e, pattern_f,
     pattern_g, pattern_h, pattern_i, pattern_j, pattern_k, pattern_l,
-    pattern_m, pattern_n, pattern_o, pattern_p, pattern_q, pattern_r
+    pattern_m, pattern_n, pattern_o, pattern_p, pattern_q, pattern_r,pattern_s
 )
 
 def capture_pattern_output(pattern_func, n=5):
@@ -38,6 +38,7 @@ patterns = [
     ('pattern_p', pattern_p),
     ('pattern_q', pattern_q),
     ('pattern_r', pattern_r),
+    ('pattern_s', pattern_s),
 ]
 
 # Generate markdown content
