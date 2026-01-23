@@ -196,9 +196,72 @@ def pattern_s(n):
         
         print("")
 
+def pattern_t(n):
+    for i in range(1,n+1):
+        for j in range(1,n):
+            if j==1 or j==n-1 or i==1 or i==n:
+                print("*",end="")
+            else:
+                print(" ",end="")
+        
+        print("")
 
+def pattern_u(n):
+    pass # Skipped for now 
 
+def pattern_v(n):
+    for i in range(1,(n*2)+1):
+        effective_i = i if i <= n else n*2 - i + 1
+        stars = n-effective_i+1
+        spaces = effective_i*2 - 2
+        
+        # print("Stars :",stars)
+        # print("Spaces :",spaces)
+        
+        for j in range(1,stars+1):
+            print("*",end="")
+        
+        for _ in range(1,spaces+1):
+            print("-",end="")
+            
+        for j in range(1,stars+1):
+            print("*",end="")
+            
+        print("")
 
+def pattern_v_optimized(n):
+        for i in range(1,(n*2)+1):
+            effective_i = i if i <= n else n*2 - i + 1
+            stars = n-effective_i+1
+            spaces = effective_i*2 - 2
+            
+            left_star_end = stars
+            right_star_start = stars + spaces+1
+            
+            
+            for j in range(1,(n*2)+1):
+
+                if j <= left_star_end or right_star_start<=j:
+                    print("*",end="")
+                else:
+                    print("-",end="")
+                    
+            print("")
+                    
+        
+              
+
+def pattern_w(n):
+    pass
+
+def pattern_x(n):
+    pass
+
+def pattern_y(n):
+    pass
+
+def pattern_z(n):
+    pass
 
 if __name__ == "__main__":
     # pattern_a(5)
@@ -220,4 +283,8 @@ if __name__ == "__main__":
     # pattern_p(5)
     # pattern_q(5)
     # pattern_r(5)
-    pattern_s(5)
+    # pattern_s(5)
+    # pattern_t(5)
+    # pattern_u(5)
+    # pattern_v(5)
+    pattern_v_optimized(5)
