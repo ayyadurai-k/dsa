@@ -247,12 +247,26 @@ def pattern_v_optimized(n):
                     print("-",end="")
                     
             print("")
-                    
-        
-              
-
+            
 def pattern_w(n):
-    pass
+    for i in range(1,n*2):
+        effective_i =  i if i <= n else n*2-i
+        stars = effective_i
+        spaces = (n*2) - (effective_i*2)
+        
+        left_star_end = stars
+        right_star_start = stars + spaces+1
+        
+        
+        for j in range(1,(n*2)+1):
+
+            if j <= left_star_end or right_star_start<=j:
+                print("*",end="")
+            else:
+                print(" ",end="")
+                
+        print("")
+            
 
 def pattern_x(n):
     pass
@@ -287,4 +301,5 @@ if __name__ == "__main__":
     # pattern_t(5)
     # pattern_u(5)
     # pattern_v(5)
-    pattern_v_optimized(5)
+    # pattern_v_optimized(5)
+    pattern_w(5)
