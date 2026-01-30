@@ -269,13 +269,43 @@ def pattern_w(n):
             
 
 def pattern_x(n):
+    for i in range(1,n+1):
+        spaces = n-i
+        numbers = i*2 - 1
+        for j in range(1,spaces+1):
+            print(" ",end="")
+        for j in range(i,0,-1):
+            print(j,end="")
+        for j in range(2,i+1):
+            print(j,end="")
+        print("")
+
+def pattern_x_optimized(n):
     pass
+        
 
 def pattern_y(n):
-    pass
+    for i in range(1,n+1):
+        spaces = (n*2) - (i*2)
+        for j in range(1,i+1):
+            print(j,end="")
+        for j in range(1,spaces+1):
+            print(" ",end="")
+        for j in range(i,0,-1):
+            print(j,end="")
+        print("")
+        
 
 def pattern_z(n):
-    pass
+    for row in range(1,n*2):
+        for col in range(1,n*2):
+            left = col
+            right = n*2 - col 
+            top = row 
+            down = n*2 - row
+            value = n- min(left,right,top,down)+1
+            print(value,end="")
+        print()
 
 if __name__ == "__main__":
     # pattern_a(5)
@@ -302,4 +332,7 @@ if __name__ == "__main__":
     # pattern_u(5)
     # pattern_v(5)
     # pattern_v_optimized(5)
-    pattern_w(5)
+    # pattern_w(5)
+    # pattern_x(5)
+    # pattern_y(5)
+    pattern_z(7)
