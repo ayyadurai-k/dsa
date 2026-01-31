@@ -1,46 +1,46 @@
 def pattern_a(n):
-    for i in range(1,n+1):
-        for j in range(1,n+1):
+    for row in range(1,n+1):
+        for col in range(1,n+1):
             print("*",end=" ")
         print("")
         
 def pattern_b(n):
-    for i in range(1,n+1):
-        for j in range(1,n+1):
-            print(i,end=" ")
+    for row in range(1,n+1):
+        for col in range(1,n+1):
+            print(row,end=" ")
         print("")
 
 def pattern_c(n):
-    for i in range(1,n+1):
-        for j in range(1,i+1):
+    for row in range(1,n+1):
+        for col in range(1,row+1):
             print("*",end=" ")
         print("")
 
 def pattern_d(n):
-    for i in range(1,n+1):
-        for j in range(1,i+1):
-            print(j,end=" ")
+    for row in range(1,n+1):
+        for col in range(1,row+1):
+            print(col,end=" ")
         print("")
 
 def pattern_e(n):
-    for i in range(1,n+1):
-        val = 0 if i%2 == 0 else 1
-        for j in range(1,i+1):
+    for row in range(1,n+1):
+        val = 0 if row%2 == 0 else 1
+        for col in range(1,row+1):
             print(val,end=" ")
             val = int(not val) # 1-val
         print("")
 
 def pattern_f(n):
     val = 1
-    for i in range(1,n+1):
-        for j in range(1,i+1):
+    for row in range(1,n+1):
+        for col in range(1,row+1):
             print(val,end=" ")
             val+=1
         print("")
 
 def pattern_g(n):
-    for i in range(1,n+1):
-        for j in range(1,(n-(i-1))+1): # +1 for for loop 
+    for row in range(1,n+1):
+        for col in range(1,(n-(row-1))+1): # +1 for for loop
             print("*",end=" ")
         print("")
 # 5-0 Calculate the 0 is matter now
@@ -48,236 +48,236 @@ def pattern_g(n):
 # 5-2
 
 def pattern_h(n):
-    for i in range(1,n+1):
-        col = n-(i-1)
-        for j in range(1,col+1): # +1 for for loop 
+    for row in range(1,n+1):
+        col = n-(row-1)
+        for j in range(1,col+1): # +1 for for loop
             print(col,end=" ")
         print("")
 
 def pattern_i(n):
-    for i in range(1,n+1):
-        col = n-(i-1)
-        for j in range(1,col+1): # +1 for for loop 
+    for row in range(1,n+1):
+        col = n-(row-1)
+        for j in range(1,col+1): # +1 for for loop
             print(j,end=" ")
         print("")
         
         
 def pattern_j(n):
-    for i in range(1,n*2):
-        stars =  i if i<= n else (n*2)-i
-        for j in range(1,stars+1):
+    for row in range(1,n*2):
+        stars =  row if row<= n else (n*2)-row
+        for col in range(1,stars+1):
             print("*",end=" ")
         print("")
 
 def pattern_k(n):
-    for i in range(1,n+1):
-        stars = i
-        spaces = n-i
-                
+    for row in range(1,n+1):
+        stars = row
+        spaces = n-row
+
         for _ in range(1,spaces+1):
             print(" ",end="")
-            
-        for j in range(1,stars+1):
+
+        for col in range(1,stars+1):
             print("*",end="")
         print("")
         
 def pattern_l(n):
-    for i in range(1,n+1):
-        stars = (n-i)+1
-        spaces = i-1
-                
+    for row in range(1,n+1):
+        stars = (n-row)+1
+        spaces = row-1
+
         for _ in range(1,spaces+1):
             print(" ",end="")
-            
-        for j in range(1,stars+1):
+
+        for col in range(1,stars+1):
             print("*",end="")
         print("")
 
 def pattern_m(n):
-    for i in range(1,n+1):
-        stars = (i*2)-1
-        spaces = n-i
-        
+    for row in range(1,n+1):
+        stars = (row*2)-1
+        spaces = n-row
+
         for _ in range(1,spaces+1):
             print(" ",end="")
-            
-        for j in range(1,stars+1):
+
+        for col in range(1,stars+1):
             print("*",end="")
         print("")
 
 def pattern_n(n):
-    for i in range(1,n+1):
-        spaces = i-1
-        stars = 2*(n-i)+1
-        
+    for row in range(1,n+1):
+        spaces = row-1
+        stars = 2*(n-row)+1
+
         for _ in range(1,spaces+1):
             print(" ",end="")
-            
-        for j in range(1,stars+1):
+
+        for col in range(1,stars+1):
             print("*",end="")
-            
+
         print("")
 
 def pattern_o(n):
-    for i in range(1,(n*2-1)+1):
-        effective_i = i if i<=n else n*2 - i
+    for row in range(1,(n*2-1)+1):
+        effective_row = row if row<=n else n*2 - row
 
-        stars = effective_i*2-1
-        spaces = n-effective_i
+        stars = effective_row*2-1
+        spaces = n-effective_row
 
         for _ in range(1,spaces+1):
             print(" ",end="")
-            
-        for j in range(1,stars+1):
+
+        for col in range(1,stars+1):
             print("*",end="")
-        
+
         print("")
 
 def pattern_p(n):
-    for i in range(1,(n*2)+1):
-        effective_i = i if i<=n else n*2 - i + 1
-        
-        spaces = effective_i - 1
-        stars = n-(effective_i-1)
+    for row in range(1,(n*2)+1):
+        effective_row = row if row<=n else n*2 - row + 1
+
+        spaces = effective_row - 1
+        stars = n-(effective_row-1)
 
         for _ in range(1,spaces+1):
             print(" ",end="")
-            
-        for j in range(1,stars+1):
+
+        for col in range(1,stars+1):
             print("*",end=" ")
-        
+
         print("")
 
 def pattern_q(n):
-    for i in range(1,n+1):
-        space = n - i
-        stars = i*2 -1 
+    for row in range(1,n+1):
+        space = n - row
+        stars = row*2 -1
 
         for _ in range(1,space+1):
             print(" ",end="")
-        
-        for j in range(1,stars+1):
-            if j==1 or stars == j or i==n:
+
+        for col in range(1,stars+1):
+            if col==1 or stars == col or row==n:
                 print("*",end="")
             else:
                 print(" ",end="")
         print("")
 
 def pattern_r(n):
-    for i in range(1,n+1):
-        space = i-1
-        stars = (n-i)*2 + 1
+    for row in range(1,n+1):
+        space = row-1
+        stars = (n-row)*2 + 1
 
         for _ in range(1,space+1):
             print(" ",end="")
-        
-        for j in range(1,stars+1):
-            if j==1 or stars == j or i==1:
+
+        for col in range(1,stars+1):
+            if col==1 or stars == col or row==1:
                 print("*",end="")
             else:
                 print(" ",end="")
         print("")
 
 def pattern_s(n):
-    for i in range(1,n*2):
-        core_i = i if i <= n else (n*2)-i
+    for row in range(1,n*2):
+        core_row = row if row <= n else (n*2)-row
 
-        spaces = n-core_i
-        stars = core_i*2 - 1
+        spaces = n-core_row
+        stars = core_row*2 - 1
 
         for _ in range(1,spaces+1):
             print(" ",end="")
-            
-        for j in range(1,stars+1):
-            if j==1 or j==stars:
+
+        for col in range(1,stars+1):
+            if col==1 or col==stars:
                 print("*",end="")
             else:
                 print(" ",end="")
-        
+
         print("")
 
 def pattern_t(n):
-    for i in range(1,n+1):
-        for j in range(1,n):
-            if j==1 or j==n-1 or i==1 or i==n:
+    for row in range(1,n+1):
+        for col in range(1,n):
+            if col==1 or col==n-1 or row==1 or row==n:
                 print("*",end="")
             else:
                 print(" ",end="")
-        
+
         print("")
 
 def pattern_u(n):
     pass # Skipped for now 
 
 def pattern_v(n):
-    for i in range(1,(n*2)+1):
-        effective_i = i if i <= n else n*2 - i + 1
-        stars = n-effective_i+1
-        spaces = effective_i*2 - 2
-        
+    for row in range(1,(n*2)+1):
+        effective_row = row if row <= n else n*2 - row + 1
+        stars = n-effective_row+1
+        spaces = effective_row*2 - 2
+
         # print("Stars :",stars)
         # print("Spaces :",spaces)
-        
-        for j in range(1,stars+1):
+
+        for col in range(1,stars+1):
             print("*",end="")
-        
+
         for _ in range(1,spaces+1):
             print("-",end="")
-            
-        for j in range(1,stars+1):
+
+        for col in range(1,stars+1):
             print("*",end="")
-            
+
         print("")
 
 def pattern_v_optimized(n):
-        for i in range(1,(n*2)+1):
-            effective_i = i if i <= n else n*2 - i + 1
-            stars = n-effective_i+1
-            spaces = effective_i*2 - 2
-            
+        for row in range(1,(n*2)+1):
+            effective_row = row if row <= n else n*2 - row + 1
+            stars = n-effective_row+1
+            spaces = effective_row*2 - 2
+
             left_star_end = stars
             right_star_start = stars + spaces+1
-            
-            
-            for j in range(1,(n*2)+1):
 
-                if j <= left_star_end or right_star_start<=j:
+
+            for col in range(1,(n*2)+1):
+
+                if col <= left_star_end or right_star_start<=col:
                     print("*",end="")
                 else:
                     print("-",end="")
-                    
+
             print("")
             
 def pattern_w(n):
-    for i in range(1,n*2):
-        effective_i =  i if i <= n else n*2-i
-        stars = effective_i
-        spaces = (n*2) - (effective_i*2)
-        
+    for row in range(1,n*2):
+        effective_row =  row if row <= n else n*2-row
+        stars = effective_row
+        spaces = (n*2) - (effective_row*2)
+
         left_star_end = stars
         right_star_start = stars + spaces+1
-        
-        
-        for j in range(1,(n*2)+1):
 
-            if j <= left_star_end or right_star_start<=j:
+
+        for col in range(1,(n*2)+1):
+
+            if col <= left_star_end or right_star_start<=col:
                 print("*",end="")
             else:
                 print(" ",end="")
-                
+
         print("")
             
 
 def pattern_x(n):
-    for i in range(1,n+1):
-        spaces = n-i
-        numbers = i*2 - 1
-        for j in range(1,spaces+1):
+    for row in range(1,n+1):
+        spaces = n-row
+        numbers = row*2 - 1
+        for col in range(1,spaces+1):
             print(" ",end="")
-        for j in range(i,0,-1):
-            print(j,end="")
-        for j in range(2,i+1):
-            print(j,end="")
+        for col in range(row,0,-1):
+            print(col,end="")
+        for col in range(2,row+1):
+            print(col,end="")
         print("")
 
 def pattern_x_optimized(n):
@@ -285,14 +285,14 @@ def pattern_x_optimized(n):
         
 
 def pattern_y(n):
-    for i in range(1,n+1):
-        spaces = (n*2) - (i*2)
-        for j in range(1,i+1):
-            print(j,end="")
-        for j in range(1,spaces+1):
+    for row in range(1,n+1):
+        spaces = (n*2) - (row*2)
+        for col in range(1,row+1):
+            print(col,end="")
+        for col in range(1,spaces+1):
             print(" ",end="")
-        for j in range(i,0,-1):
-            print(j,end="")
+        for col in range(row,0,-1):
+            print(col,end="")
         print("")
         
 
