@@ -12,6 +12,8 @@ def pattern_17(n):
         for col in range(2,effective_row+1):
             print(col,end="")
         print("")
+        
+
 
 if __name__ == "__main__":
     pattern_17(5)
